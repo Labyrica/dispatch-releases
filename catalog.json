@@ -1,0 +1,243 @@
+{
+  "schema": 1,
+  "apps": [
+    {
+      "id": "hightower",
+      "name": "Hightower",
+      "tagline": "Every git repo on your machine, in one window.",
+      "kind": "tauri",
+      "sources": [
+        {
+          "repo": "Labyrica/hightower-releases",
+          "tagPrefix": "v"
+        },
+        {
+          "repo": "Labyrica/hightower",
+          "tagPrefix": "v"
+        }
+      ],
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDExNDFGQUNFOEQ4M0NDQwpSV1RNUE5qb3JCOFVBYUZsdWtlbmNJU0JWTmo3NFZrRFRkeWFsdmIvVDdBcEJlbkswVUUxY3k5cQo=",
+      "windows": {
+        "uninstallKeys": [
+          "Hightower"
+        ],
+        "exe": "hightower.exe",
+        "assets": [
+          "*_x64-setup.exe"
+        ]
+      },
+      "macos": {
+        "bundleId": "com.hightower.app",
+        "appNames": [
+          "Hightower.app"
+        ],
+        "assets": [
+          "*_{arch}.app.tar.gz"
+        ]
+      }
+    },
+    {
+      "id": "cascade",
+      "name": "Cascade",
+      "tagline": "Drag an APK onto a phone or headset.",
+      "kind": "tauri",
+      "sources": [
+        {
+          "repo": "Labyrica/cascade-releases",
+          "tagPrefix": "v"
+        },
+        {
+          "repo": "Labyrica/cascade",
+          "tagPrefix": "v"
+        }
+      ],
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDVBQzk1MEJDQTIwNjUzN0UKUldSK1V3YWl2RkRKV3V4TkJZOGNHUzV5UndwbXBySUpsOFdZL2MwT0wyaUkxeVBHdXBSOFRMQlIK",
+      "windows": {
+        "uninstallKeys": [
+          "Cascade"
+        ],
+        "exe": "cascade.exe",
+        "assets": [
+          "*_x64-setup.exe"
+        ]
+      },
+      "macos": {
+        "bundleId": "com.labyrica.cascade",
+        "appNames": [
+          "Cascade.app"
+        ],
+        "assets": [
+          "*_{arch}.app.tar.gz"
+        ]
+      }
+    },
+    {
+      "id": "pyrite",
+      "name": "Pyrite",
+      "tagline": "Blocky, game-ready 3D assets from a prompt.",
+      "kind": "source",
+      "sources": [
+        {
+          "repo": "Labyrica/pyrite",
+          "tagPrefix": "v"
+        }
+      ],
+      "source": {
+        "locate": [
+          {
+            "json": "~/Pyrite/mcp-entry.json",
+            "pointer": "/args/0",
+            "up": 2
+          }
+        ],
+        "marker": "dist/pyrite.mjs",
+        "stop": [
+          "node",
+          "dist/pyrite.mjs",
+          "stop"
+        ],
+        "build": [
+          [
+            "pnpm",
+            "install",
+            "--frozen-lockfile"
+          ],
+          [
+            "pnpm",
+            "build"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "foundry-godot",
+      "name": "Foundry for Godot",
+      "family": "WazziCode",
+      "tagline": "Agent tools, diagnostics and playtesting for Godot.",
+      "kind": "tauri",
+      "sources": [
+        {
+          "repo": "robertobendi/wazzicode-godot",
+          "tagPrefix": "desktop-v"
+        }
+      ],
+      "windows": {
+        "uninstallKeys": [
+          "Foundry for Godot"
+        ],
+        "exe": "foundry-godot.exe",
+        "assets": [
+          "*_x64-setup.exe"
+        ]
+      },
+      "macos": {
+        "bundleId": "com.wazzicode.foundrygodot",
+        "appNames": [
+          "Foundry for Godot.app"
+        ],
+        "assets": [
+          "*_{arch}.app.tar.gz"
+        ]
+      }
+    },
+    {
+      "id": "foundry-unity",
+      "name": "Foundry for Unity",
+      "family": "WazziCode",
+      "tagline": "Agent tools, diagnostics and playtesting for Unity.",
+      "kind": "tauri",
+      "sources": [
+        {
+          "repo": "robertobendi/wazzicode-unity",
+          "tagPrefix": "desktop-v"
+        }
+      ],
+      "windows": {
+        "uninstallKeys": [
+          "Foundry for Unity",
+          "Unity Vibe Studio"
+        ],
+        "exe": "unity-vibe-studio.exe",
+        "assets": [
+          "*_x64-setup.exe"
+        ],
+        "cleanup": [
+          {
+            "path": "%LOCALAPPDATA%/Unity Vibe Studio",
+            "unlessContains": "unity-vibe-studio.exe"
+          },
+          {
+            "registry": "HKCU/Software/wazzicode/Unity Vibe Studio"
+          }
+        ]
+      },
+      "macos": {
+        "bundleId": "com.wazzicode.unityvibestudio",
+        "appNames": [
+          "Foundry for Unity.app",
+          "foundry-unity.app",
+          "Unity Vibe Studio.app"
+        ],
+        "assets": [
+          "*_{arch}.app.tar.gz"
+        ]
+      }
+    },
+    {
+      "id": "bismuth",
+      "name": "Bismuth",
+      "tagline": "Paste a URL. Get a published website.",
+      "kind": "tauri",
+      "sources": [
+        {
+          "repo": "Labyrica/Bismuth",
+          "tagPrefix": "v"
+        }
+      ],
+      "windows": {
+        "uninstallKeys": [
+          "Bismuth"
+        ],
+        "exe": "bismuth.exe",
+        "assets": [
+          "*_x64-setup.exe",
+          "*_x64_en-US.msi"
+        ]
+      },
+      "macos": {
+        "bundleId": "com.labyrica.bismuth",
+        "appNames": [
+          "Bismuth.app"
+        ],
+        "assets": [
+          "*_{arch}.app.tar.gz",
+          "*_{arch}.dmg"
+        ]
+      }
+    },
+    {
+      "id": "phantom-control",
+      "name": "Phantom Control",
+      "tagline": "Drive your Mac by voice from the menu bar.",
+      "kind": "tauri",
+      "sources": [
+        {
+          "repo": "Labyrica/Phantom",
+          "tagPrefix": "v"
+        }
+      ],
+      "macos": {
+        "bundleId": "com.bendinelli.PhantomControl",
+        "appNames": [
+          "Phantom Control.app"
+        ],
+        "assets": [
+          "*_{arch}.app.tar.gz",
+          "*.app.zip",
+          "*_{arch}.dmg",
+          "*.dmg"
+        ]
+      }
+    }
+  ]
+}
