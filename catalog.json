@@ -19,7 +19,7 @@
       "macos": {
         "bundleId": "com.hightower.app",
         "appNames": ["Hightower.app"],
-        "assets": ["*_{arch}.app.tar.gz"],
+        "assets": ["*_{arch}.app.tar.gz", "*_{arch}.dmg"],
         "dataDirs": [
           "~/Library/Application Support/Hightower",
           "~/Library/Application Support/com.hightower.app",
@@ -81,7 +81,7 @@
       "macos": {
         "bundleId": "com.wazzicode.foundrygodot",
         "appNames": ["Foundry for Godot.app"],
-        "assets": ["*_{arch}.app.tar.gz"],
+        "assets": ["*_{arch}.app.tar.gz", "*_{arch}.dmg"],
         "dataDirs": [
           "~/Library/Application Support/foundry-godot",
           "~/Library/Application Support/com.wazzicode.foundrygodot",
@@ -113,7 +113,7 @@
       "macos": {
         "bundleId": "com.wazzicode.unityvibestudio",
         "appNames": ["Foundry for Unity.app", "foundry-unity.app", "Unity Vibe Studio.app"],
-        "assets": ["*_{arch}.app.tar.gz"],
+        "assets": ["*_{arch}.app.tar.gz", "*_{arch}.dmg"],
         "dataDirs": [
           "~/Library/Application Support/unity-vibe-studio",
           "~/Library/Application Support/com.wazzicode.unityvibestudio",
