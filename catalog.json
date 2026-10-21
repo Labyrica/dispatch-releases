@@ -24,6 +24,10 @@
         "exe": "hightower.exe",
         "assets": [
           "*_x64-setup.exe"
+        ],
+        "dataDirs": [
+          "%APPDATA%/Hightower",
+          "%LOCALAPPDATA%/com.hightower.app"
         ]
       },
       "macos": {
@@ -33,6 +37,12 @@
         ],
         "assets": [
           "*_{arch}.app.tar.gz"
+        ],
+        "dataDirs": [
+          "~/Library/Application Support/Hightower",
+          "~/Library/Application Support/com.hightower.app",
+          "~/Library/Caches/com.hightower.app",
+          "~/Library/WebKit/com.hightower.app"
         ]
       }
     },
@@ -59,6 +69,10 @@
         "exe": "cascade.exe",
         "assets": [
           "*_x64-setup.exe"
+        ],
+        "dataDirs": [
+          "%APPDATA%/com.labyrica.cascade",
+          "%LOCALAPPDATA%/com.labyrica.cascade"
         ]
       },
       "macos": {
@@ -68,6 +82,11 @@
         ],
         "assets": [
           "*_{arch}.app.tar.gz"
+        ],
+        "dataDirs": [
+          "~/Library/Application Support/com.labyrica.cascade",
+          "~/Library/Caches/com.labyrica.cascade",
+          "~/Library/WebKit/com.labyrica.cascade"
         ]
       }
     },
@@ -128,6 +147,10 @@
         "exe": "foundry-godot.exe",
         "assets": [
           "*_x64-setup.exe"
+        ],
+        "dataDirs": [
+          "%APPDATA%/foundry-godot",
+          "%LOCALAPPDATA%/com.wazzicode.foundrygodot"
         ]
       },
       "macos": {
@@ -137,6 +160,12 @@
         ],
         "assets": [
           "*_{arch}.app.tar.gz"
+        ],
+        "dataDirs": [
+          "~/Library/Application Support/foundry-godot",
+          "~/Library/Application Support/com.wazzicode.foundrygodot",
+          "~/Library/Caches/com.wazzicode.foundrygodot",
+          "~/Library/WebKit/com.wazzicode.foundrygodot"
         ]
       }
     },
@@ -169,6 +198,10 @@
           {
             "registry": "HKCU/Software/wazzicode/Unity Vibe Studio"
           }
+        ],
+        "dataDirs": [
+          "%APPDATA%/unity-vibe-studio",
+          "%LOCALAPPDATA%/com.wazzicode.unityvibestudio"
         ]
       },
       "macos": {
@@ -180,38 +213,12 @@
         ],
         "assets": [
           "*_{arch}.app.tar.gz"
-        ]
-      }
-    },
-    {
-      "id": "bismuth",
-      "name": "Bismuth",
-      "tagline": "Paste a URL. Get a published website.",
-      "kind": "tauri",
-      "sources": [
-        {
-          "repo": "Labyrica/Bismuth",
-          "tagPrefix": "v"
-        }
-      ],
-      "windows": {
-        "uninstallKeys": [
-          "Bismuth"
         ],
-        "exe": "bismuth.exe",
-        "assets": [
-          "*_x64-setup.exe",
-          "*_x64_en-US.msi"
-        ]
-      },
-      "macos": {
-        "bundleId": "com.labyrica.bismuth",
-        "appNames": [
-          "Bismuth.app"
-        ],
-        "assets": [
-          "*_{arch}.app.tar.gz",
-          "*_{arch}.dmg"
+        "dataDirs": [
+          "~/Library/Application Support/unity-vibe-studio",
+          "~/Library/Application Support/com.wazzicode.unityvibestudio",
+          "~/Library/Caches/com.wazzicode.unityvibestudio",
+          "~/Library/WebKit/com.wazzicode.unityvibestudio"
         ]
       }
     },
@@ -236,6 +243,11 @@
           "*.app.zip",
           "*_{arch}.dmg",
           "*.dmg"
+        ],
+        "dataDirs": [
+          "~/Library/Application Support/PhantomControl",
+          "~/Library/Caches/com.bendinelli.PhantomControl",
+          "~/Library/Preferences/com.bendinelli.PhantomControl.plist"
         ]
       }
     }
