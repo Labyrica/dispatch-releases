@@ -5,39 +5,21 @@
       "id": "hightower",
       "name": "Hightower",
       "tagline": "Every git repo on your machine, in one window.",
-      "kind": "tauri",
-      "sources": [
-        {
-          "repo": "Labyrica/hightower-releases",
-          "tagPrefix": "v"
-        },
-        {
-          "repo": "Labyrica/hightower",
-          "tagPrefix": "v"
-        }
-      ],
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDExNDFGQUNFOEQ4M0NDQwpSV1RNUE5qb3JCOFVBYUZsdWtlbmNJU0JWTmo3NFZrRFRkeWFsdmIvVDdBcEJlbkswVUUxY3k5cQo=",
+      "sources": [
+        { "repo": "Labyrica/hightower-releases" },
+        { "repo": "Labyrica/hightower" }
+      ],
       "windows": {
-        "uninstallKeys": [
-          "Hightower"
-        ],
+        "uninstallKeys": ["Hightower"],
         "exe": "hightower.exe",
-        "assets": [
-          "*_x64-setup.exe"
-        ],
-        "dataDirs": [
-          "%APPDATA%/Hightower",
-          "%LOCALAPPDATA%/com.hightower.app"
-        ]
+        "assets": ["*_x64-setup.exe"],
+        "dataDirs": ["%APPDATA%/Hightower", "%LOCALAPPDATA%/com.hightower.app"]
       },
       "macos": {
         "bundleId": "com.hightower.app",
-        "appNames": [
-          "Hightower.app"
-        ],
-        "assets": [
-          "*_{arch}.app.tar.gz"
-        ],
+        "appNames": ["Hightower.app"],
+        "assets": ["*_{arch}.app.tar.gz"],
         "dataDirs": [
           "~/Library/Application Support/Hightower",
           "~/Library/Application Support/com.hightower.app",
@@ -50,81 +32,33 @@
       "id": "cascade",
       "name": "Cascade",
       "tagline": "Drag an APK onto a phone or headset.",
-      "kind": "tauri",
-      "sources": [
-        {
-          "repo": "Labyrica/cascade-releases",
-          "tagPrefix": "v"
-        },
-        {
-          "repo": "Labyrica/cascade",
-          "tagPrefix": "v"
-        }
-      ],
-      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDVBQzk1MEJDQTIwNjUzN0UKUldSK1V3YWl2RkRKV3V4TkJZOGNHUzV5UndwbXBySUpsOFdZL2MwT0wyaUkxeVBHdXBSOFRMQlIK",
-      "windows": {
-        "uninstallKeys": [
-          "Cascade"
-        ],
-        "exe": "cascade.exe",
-        "assets": [
-          "*_x64-setup.exe"
-        ],
-        "dataDirs": [
-          "%APPDATA%/com.labyrica.cascade",
-          "%LOCALAPPDATA%/com.labyrica.cascade"
-        ]
-      },
-      "macos": {
-        "bundleId": "com.labyrica.cascade",
-        "appNames": [
-          "Cascade.app"
-        ],
-        "assets": [
-          "*_{arch}.app.tar.gz"
-        ],
-        "dataDirs": [
-          "~/Library/Application Support/com.labyrica.cascade",
-          "~/Library/Caches/com.labyrica.cascade",
-          "~/Library/WebKit/com.labyrica.cascade"
-        ]
-      }
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDVBQzk1MEJDQTIwNjUzN0UKUldSK1V3YWl2RkRKV3V4TkJZOGNHUzV5UndwbXBySUpsOFdZL2MwT0wyaUkxeVBHdXBSOFRMQlIK"
     },
     {
       "id": "pyrite",
       "name": "Pyrite",
       "tagline": "Blocky, game-ready 3D assets from a prompt.",
-      "kind": "source",
-      "sources": [
-        {
-          "repo": "Labyrica/pyrite",
-          "tagPrefix": "v"
-        }
-      ],
+      "kind": "bundle",
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDFGNzUzNDA3NkFFRUE0NjUKUldSbHBPNXFCelIxSHk5Nm5ONmdSQktyTlBxU1RqK2x0K0FlRGdzcG95Wmlndk9XVGZXWXhkME8K",
+      "bundle": {
+        "entry": "dist/pyrite.mjs",
+        "runtime": { "command": "node", "name": "Node.js", "minMajor": 20, "download": "https://nodejs.org/en/download" },
+        "assets": {
+          "windows": ["*_windows-x64.zip"],
+          "macos": ["*_macos-{arch}.zip"]
+        },
+        "stop": ["node", "dist/pyrite.mjs", "stop"],
+        "postInstall": [["node", "dist/pyrite.mjs", "shortcut"]],
+        "preUninstall": [["node", "dist/pyrite.mjs", "shortcut", "--remove"]],
+        "dataDirs": ["~/Pyrite"]
+      },
       "source": {
-        "locate": [
-          {
-            "json": "~/Pyrite/mcp-entry.json",
-            "pointer": "/args/0",
-            "up": 2
-          }
-        ],
+        "locate": [{ "json": "~/Pyrite/mcp-entry.json", "pointer": "/args/0", "up": 2 }],
         "marker": "dist/pyrite.mjs",
-        "stop": [
-          "node",
-          "dist/pyrite.mjs",
-          "stop"
-        ],
+        "stop": ["node", "dist/pyrite.mjs", "stop"],
         "build": [
-          [
-            "pnpm",
-            "install",
-            "--frozen-lockfile"
-          ],
-          [
-            "pnpm",
-            "build"
-          ]
+          ["pnpm", "install", "--frozen-lockfile"],
+          ["pnpm", "build"]
         ]
       }
     },
@@ -133,34 +67,21 @@
       "name": "Foundry for Godot",
       "family": "WazziCode",
       "tagline": "Agent tools, diagnostics and playtesting for Godot.",
-      "kind": "tauri",
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDQ0NkZBMDBBNThEQzAwRTYKUldUbUFOeFlDcUJ2UkQ4MjhoMmFTUmxGZ3V5Um9jTWtIR0VpekM2RFJ3RzQ4TlVnRy9xdjQza24K",
       "sources": [
-        {
-          "repo": "robertobendi/wazzicode-godot",
-          "tagPrefix": "desktop-v"
-        }
+        { "repo": "Labyrica/foundry-godot-releases" },
+        { "repo": "Labyrica/wazzicode-godot", "tagPrefix": "desktop-v" }
       ],
       "windows": {
-        "uninstallKeys": [
-          "Foundry for Godot"
-        ],
+        "uninstallKeys": ["Foundry for Godot"],
         "exe": "foundry-godot.exe",
-        "assets": [
-          "*_x64-setup.exe"
-        ],
-        "dataDirs": [
-          "%APPDATA%/foundry-godot",
-          "%LOCALAPPDATA%/com.wazzicode.foundrygodot"
-        ]
+        "assets": ["*_x64-setup.exe"],
+        "dataDirs": ["%APPDATA%/foundry-godot", "%LOCALAPPDATA%/com.wazzicode.foundrygodot"]
       },
       "macos": {
         "bundleId": "com.wazzicode.foundrygodot",
-        "appNames": [
-          "Foundry for Godot.app"
-        ],
-        "assets": [
-          "*_{arch}.app.tar.gz"
-        ],
+        "appNames": ["Foundry for Godot.app"],
+        "assets": ["*_{arch}.app.tar.gz"],
         "dataDirs": [
           "~/Library/Application Support/foundry-godot",
           "~/Library/Application Support/com.wazzicode.foundrygodot",
@@ -174,46 +95,25 @@
       "name": "Foundry for Unity",
       "family": "WazziCode",
       "tagline": "Agent tools, diagnostics and playtesting for Unity.",
-      "kind": "tauri",
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEI2RjI2NTNEODJCQjUzMDUKUldRRlU3dUNQV1h5dG5UVTYxODQzcURDMGhqUGdOWVpxckYyL0pITHJUL0dxNlM3UTVsOEYxTXQK",
       "sources": [
-        {
-          "repo": "robertobendi/wazzicode-unity",
-          "tagPrefix": "desktop-v"
-        }
+        { "repo": "Labyrica/foundry-unity-releases" },
+        { "repo": "Labyrica/wazzicode-unity", "tagPrefix": "desktop-v" }
       ],
       "windows": {
-        "uninstallKeys": [
-          "Foundry for Unity",
-          "Unity Vibe Studio"
-        ],
+        "uninstallKeys": ["Foundry for Unity", "Unity Vibe Studio"],
         "exe": "unity-vibe-studio.exe",
-        "assets": [
-          "*_x64-setup.exe"
-        ],
+        "assets": ["*_x64-setup.exe"],
         "cleanup": [
-          {
-            "path": "%LOCALAPPDATA%/Unity Vibe Studio",
-            "unlessContains": "unity-vibe-studio.exe"
-          },
-          {
-            "registry": "HKCU/Software/wazzicode/Unity Vibe Studio"
-          }
+          { "path": "%LOCALAPPDATA%/Unity Vibe Studio", "unlessContains": "unity-vibe-studio.exe" },
+          { "registry": "HKCU/Software/wazzicode/Unity Vibe Studio" }
         ],
-        "dataDirs": [
-          "%APPDATA%/unity-vibe-studio",
-          "%LOCALAPPDATA%/com.wazzicode.unityvibestudio"
-        ]
+        "dataDirs": ["%APPDATA%/unity-vibe-studio", "%LOCALAPPDATA%/com.wazzicode.unityvibestudio"]
       },
       "macos": {
         "bundleId": "com.wazzicode.unityvibestudio",
-        "appNames": [
-          "Foundry for Unity.app",
-          "foundry-unity.app",
-          "Unity Vibe Studio.app"
-        ],
-        "assets": [
-          "*_{arch}.app.tar.gz"
-        ],
+        "appNames": ["Foundry for Unity.app", "foundry-unity.app", "Unity Vibe Studio.app"],
+        "assets": ["*_{arch}.app.tar.gz"],
         "dataDirs": [
           "~/Library/Application Support/unity-vibe-studio",
           "~/Library/Application Support/com.wazzicode.unityvibestudio",
@@ -226,24 +126,12 @@
       "id": "phantom-control",
       "name": "Phantom Control",
       "tagline": "Drive your Mac by voice from the menu bar.",
-      "kind": "tauri",
-      "sources": [
-        {
-          "repo": "Labyrica/Phantom",
-          "tagPrefix": "v"
-        }
-      ],
+      "platforms": ["macos"],
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IERBNDlGQTZBNjZBMjFEQjQKUldTMEhhSm1hdnBKMmhlZ3VGTW1NQVJUUFpSOFdsLzBGajBoOFcvRUt0ZmdnV25MRlF0ak1hbGkK",
       "macos": {
         "bundleId": "com.bendinelli.PhantomControl",
-        "appNames": [
-          "Phantom Control.app"
-        ],
-        "assets": [
-          "*_{arch}.app.tar.gz",
-          "*.app.zip",
-          "*_{arch}.dmg",
-          "*.dmg"
-        ],
+        "appNames": ["Phantom Control.app"],
+        "assets": ["*_{arch}.app.tar.gz"],
         "dataDirs": [
           "~/Library/Application Support/PhantomControl",
           "~/Library/Caches/com.bendinelli.PhantomControl",
