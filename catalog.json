@@ -4,6 +4,7 @@
     {
       "id": "hightower",
       "name": "Hightower",
+      "hub": true,
       "tagline": "Every git repo on your machine, in one window.",
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDExNDFGQUNFOEQ4M0NDQwpSV1RNUE5qb3JCOFVBYUZsdWtlbmNJU0JWTmo3NFZrRFRkeWFsdmIvVDdBcEJlbkswVUUxY3k5cQo=",
       "sources": [
@@ -31,12 +32,14 @@
     {
       "id": "cascade",
       "name": "Cascade",
+      "hub": true,
       "tagline": "Drag an APK onto a phone or headset.",
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDVBQzk1MEJDQTIwNjUzN0UKUldSK1V3YWl2RkRKV3V4TkJZOGNHUzV5UndwbXBySUpsOFdZL2MwT0wyaUkxeVBHdXBSOFRMQlIK"
     },
     {
       "id": "pyrite",
       "name": "Pyrite",
+      "hub": true,
       "tagline": "Blocky, game-ready 3D assets from a prompt.",
       "kind": "bundle",
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEIwNDFCMkJBNEMzMERENDAKUldSQTNUQk11ckpCc0RqTEpwR1EreGo4dVpINUtyamtVVjhxM1Q1MG0xelNIL1J4eWNzb2Iybm8K",
@@ -65,6 +68,7 @@
     {
       "id": "foundry-godot",
       "name": "Foundry for Godot",
+      "hub": true,
       "family": "WazziCode",
       "tagline": "Agent tools, diagnostics and playtesting for Godot.",
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEJGNDI2NzcxNEY1RDVFNUIKUldSYlhsMVBjV2RDdjRITkFacTdtamNOVEh1UExYeC9HaUFEUVRFc1lqdUdHYUEvditZdGRSdlAK",
@@ -93,6 +97,7 @@
     {
       "id": "foundry-unity",
       "name": "Foundry for Unity",
+      "hub": true,
       "family": "WazziCode",
       "tagline": "Agent tools, diagnostics and playtesting for Unity.",
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDc0NTczMkZGMzdBMkQ5MzMKUldRejJhSTMvekpYZEJ0NUxTT1Q0VXdQdVF3alZsMCtOZ0hSV0xsWVFZZkVCcUVnc2JkbXN5UWoK",
@@ -125,6 +130,7 @@
     {
       "id": "phantom-control",
       "name": "Phantom Control",
+      "hub": true,
       "tagline": "Drive your Mac by voice from the menu bar.",
       "platforms": ["macos"],
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IERBNDlGQTZBNjZBMjFEQjQKUldTMEhhSm1hdnBKMmhlZ3VGTW1NQVJUUFpSOFdsLzBGajBoOFcvRUt0ZmdnV25MRlF0ak1hbGkK",
