@@ -39,7 +39,7 @@
       "name": "Pyrite",
       "tagline": "Blocky, game-ready 3D assets from a prompt.",
       "kind": "bundle",
-      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDFGNzUzNDA3NkFFRUE0NjUKUldSbHBPNXFCelIxSHk5Nm5ONmdSQktyTlBxU1RqK2x0K0FlRGdzcG95Wmlndk9XVGZXWXhkME8K",
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEIwNDFCMkJBNEMzMERENDAKUldSQTNUQk11ckpCc0RqTEpwR1EreGo4dVpINUtyamtVVjhxM1Q1MG0xelNIL1J4eWNzb2Iybm8K",
       "bundle": {
         "entry": "dist/pyrite.mjs",
         "runtime": { "command": "node", "name": "Node.js", "minMajor": 20, "download": "https://nodejs.org/en/download" },
@@ -67,7 +67,7 @@
       "name": "Foundry for Godot",
       "family": "WazziCode",
       "tagline": "Agent tools, diagnostics and playtesting for Godot.",
-      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDQ0NkZBMDBBNThEQzAwRTYKUldUbUFOeFlDcUJ2UkQ4MjhoMmFTUmxGZ3V5Um9jTWtIR0VpekM2RFJ3RzQ4TlVnRy9xdjQza24K",
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEJGNDI2NzcxNEY1RDVFNUIKUldSYlhsMVBjV2RDdjRITkFacTdtamNOVEh1UExYeC9HaUFEUVRFc1lqdUdHYUEvditZdGRSdlAK",
       "sources": [
         { "repo": "Labyrica/foundry-godot-releases" },
         { "repo": "Labyrica/wazzicode-godot", "tagPrefix": "desktop-v" }
@@ -95,7 +95,7 @@
       "name": "Foundry for Unity",
       "family": "WazziCode",
       "tagline": "Agent tools, diagnostics and playtesting for Unity.",
-      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEI2RjI2NTNEODJCQjUzMDUKUldRRlU3dUNQV1h5dG5UVTYxODQzcURDMGhqUGdOWVpxckYyL0pITHJUL0dxNlM3UTVsOEYxTXQK",
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDc0NTczMkZGMzdBMkQ5MzMKUldRejJhSTMvekpYZEJ0NUxTT1Q0VXdQdVF3alZsMCtOZ0hSV0xsWVFZZkVCcUVnc2JkbXN5UWoK",
       "sources": [
         { "repo": "Labyrica/foundry-unity-releases" },
         { "repo": "Labyrica/wazzicode-unity", "tagPrefix": "desktop-v" }
