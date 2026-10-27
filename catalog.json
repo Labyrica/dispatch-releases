@@ -45,7 +45,6 @@
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEIwNDFCMkJBNEMzMERENDAKUldSQTNUQk11ckpCc0RqTEpwR1EreGo4dVpINUtyamtVVjhxM1Q1MG0xelNIL1J4eWNzb2Iybm8K",
       "bundle": {
         "entry": "dist/pyrite.mjs",
-        "runtime": { "command": "node", "name": "Node.js", "minMajor": 20, "download": "https://nodejs.org/en/download" },
         "assets": {
           "windows": ["*_windows-x64.zip"],
           "macos": ["*_macos-{arch}.zip"]
